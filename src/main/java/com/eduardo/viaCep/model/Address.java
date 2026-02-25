@@ -1,7 +1,9 @@
 package com.eduardo.viaCep.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
+@Getter
 public class Address {
     @JsonProperty("cep")
     private String zipCode;
@@ -17,4 +19,6 @@ public class Address {
     private String state;
     @JsonProperty("ddd")
     private String areaCode;
+    @JsonProperty("erro")
+    private Boolean error;
 }
