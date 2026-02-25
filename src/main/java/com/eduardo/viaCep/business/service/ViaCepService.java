@@ -35,7 +35,7 @@ public class ViaCepService {
     }
 
     private void validateZipCode(String zipCode) {
-        if(zipCode == null || zipCode.matches("\\d{8}")) {
+        if(zipCode == null || !zipCode.matches("\\d{8}")) {
             throw new InvalidZipCodeException("Invalid ZIP code. Must contain 8 numeric digits.");
         }
     }
